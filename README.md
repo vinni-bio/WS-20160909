@@ -1,16 +1,16 @@
 09/09/2016
 
-# Workshop: Introduction to Molecular Phylogenetic Inference 
+# Workshop: An Introduction to Molecular Phylogenetic Inference 
 
 ## Lab 1
 
-### A. Check the number of entrees for our group of interest
+### A. Check the number of entrees for our group of interest (Bears)
 1. Go to http://www.ncbi.nlm.nih.gov
-2. Click "All Resources" button in the left side bar
+2. Find and click "All Resources" button in the left side bar
 3. In the list of all databases, find and click "Nucleotide Database"
 4. In the search line, enter:
 `all[filter]`
-5. On the left side bar, find 'Species' filter and click "customize"
+5. On the left side bar, find *Species* filter and click "customize" button
 6. Add and select:
 `Ursidae`
 
@@ -25,7 +25,7 @@
 5. Save sequences into: 
 `ursidae-cytb.fasta`
 
-### C.Selection of the outgroup:
+### C. Select the outgroup
 1. Open 'Resources' top menu
 2. Go to 'Sequence Analysis' and select 'BLAST (Basic Local Alignment Search Tool)'
 3. Select 'Nucleotide BLAST'
