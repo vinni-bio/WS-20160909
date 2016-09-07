@@ -1,0 +1,35 @@
+Settings used
+
+alignment         : ./bears.phy
+branchlengths     : linked
+models            : GTR+I+G, GTR+G
+model_selection   : bic
+search            : greedy
+
+
+Best partitioning scheme
+
+Scheme Name       : step_1
+Scheme lnL        : -6254.89181
+Scheme BIC        : 13024.0241261
+Number of params  : 66
+Number of sites   : 2420
+Number of subsets : 5
+
+Subset | Best Model | Subset Partitions              | Subset Sites                   | Alignment                               
+1      | GTR+G      | cytb_pos1                      | 1-1140\3                       | ./analysis/phylofiles/d23f17b5af4ee3dde3d424edf7e1af2b.phy
+2      | GTR+I+G    | cytb_pos2, irbp_pos2           | 2-1140\3, 1142-2420\3          | ./analysis/phylofiles/94468f56dd68917e10582bb139a8695c.phy
+3      | GTR+I+G    | cytb_pos3                      | 3-1140\3                       | ./analysis/phylofiles/84344342f43b848e88a93a38a468a4c8.phy
+4      | GTR+G      | irbp_pos1                      | 1141-2420\3                    | ./analysis/phylofiles/bbb10246c7ac9387fb3209e79a7efe06.phy
+5      | GTR+G      | irbp_pos3                      | 1143-2420\3                    | ./analysis/phylofiles/3480d1754f24631adebb977aecd5a2c9.phy
+
+
+Scheme Description in PartitionFinder format
+Scheme_step_1 = (cytb_pos1) (cytb_pos2, irbp_pos2) (cytb_pos3) (irbp_pos1) (irbp_pos3);
+
+RaxML-style partition definitions
+DNA, p1 = 1-1140\3
+DNA, p2 = 2-1140\3, 1142-2420\3
+DNA, p3 = 3-1140\3
+DNA, p4 = 1141-2420\3
+DNA, p5 = 1143-2420\3
