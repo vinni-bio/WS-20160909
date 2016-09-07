@@ -117,20 +117,35 @@
 
 ### B. Maximum Parsimony analysis (MP)
 1. Open **Phylogeny** menu and select **Construct/Test Maximum Parsimony Tree** 
-2. Set bootstrap test with 100 replicates
-3. Set gaps for complete deletion
-4. Set SPR as tree search method
+2. Set **bootstrap test** with *100 replicates*
+3. Set **gaps** for *complete deletion*
+4. Set **SPR** as tree search method
 5. Run the analysis
 6. After completion, root the tree with the outgroup
 7. Save the tree as the image file in png format:
 ![Maximum Parsimony Tree](../master/LAB2/bears_parsimony.png)
 
 #### HOMEWORK QUESTIONS (Maximum Parsimony):
-  1. Does the original tree differ from the bootstrap consensus tree?
-  2. Run the MP analysis with the larger number of bootstrap replications. How did the bootstrap support values change?
-  3. Run the MP analysis using only 1st and 2nd codon positions. How did the tree topology and bootstrap support values change?
-  4. Run the MP analysis with different tree search methods. Did the tree topology and bootstrap support values change?
-  5. Run the MP analysis for two genes separately (open *.fasta files). Does the tree topology differ between the two genes?
+  * Does the original tree differ from the bootstrap consensus tree?
+  * Run the MP analysis with the larger number of bootstrap replications. How did the bootstrap support values change?
+  * Run the MP analysis using only 1st and 2nd codon positions. How did the tree topology and bootstrap support values change?
+  * Run the MP analysis with different tree search methods. Did the tree topology and bootstrap support values change?
+  * Run the MP analysis for two genes separately (open *.fasta files). Does the tree topology differ between the two genes?
 
 ### C. Neighbor-Joining test in MEGA 7.0
-1. 
+1. Open **Phylogeny** menu and select **Construct/Test Neighbor-Joining Tree** 
+2. Set **bootstrap test** with 100 replicates
+3. Set **gaps** for complete deletion
+4. Set **model** option to *p-distance*
+5. Run the analysis
+6. After completion, root the tree with the outgroup
+7. Save the tree as the image file in png format:
+![Maximum Parsimony Tree](../master/LAB2/bears_distance.png)
+
+#### HOMEWORK QUESTIONS (Distance-matrix methods):
+  * Does the original tree differ from the bootstrap consensus tree?
+  * Run the NJ analysis with the larger number of bootstrap replications. How did the bootstrap support values change?
+  * Run the NJ analysis using only 1st and 2nd codon positions. How did the tree topology and bootstrap support values change?
+  * Run the NJ analysis with different substitution models. How did the tree topology and bootstrap support values change?
+  * How does the tree topology differ between the corresponding NJ and MP trees?
+
