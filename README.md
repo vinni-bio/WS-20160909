@@ -174,12 +174,12 @@
 2. Open  `partition_finder.cfg` file in the text editor (e.g., TextWrangler)
 3. Change the name of the alignment to `bears.phy`
 4. Change the data block section as the following:<br/>
-	```cytb_pos1 = 1-1140\3;
-	cytb_pos2 = 2-1140\3;
-	cytb_pos3 = 3-1140\3;
-	irbp_pos1 = 1141-2420\3;
-	irbp_pos2 = 1142-2420\3;
-	irbp_pos3 = 1143-2420\3;```
+```cytb_pos1 = 1-1140\3;
+cytb_pos2 = 2-1140\3;
+cytb_pos3 = 3-1140\3;
+irbp_pos1 = 1141-2420\3;
+irbp_pos2 = 1142-2420\3;
+irbp_pos3 = 1143-2420\3;```
 5. Save the file, leaving its original file name:<br/>
 [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg)
 6. Move the [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg) file to the folder with your alignment sequences
