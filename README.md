@@ -83,10 +83,11 @@
 12. Export sequences as Phylip (RAxML)<br/>
 [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy)
 
-### F. Check the entrees for *irbp* protein in UniProt Database
+### F. Check entrees for *irbp* protein in UniProt Database
 1. Go to http://www.uniprot.org/
-2. In the search line, enter:
+2. In the search line, enter:<br/>
 `name:"interphotoreceptor retinoid binding"`
-3. In the search line, enter:
-`name:"interphotoreceptor retinoid binding” taxonomy:”Ursidae”`
+3. In the search line, enter:<br/>
+`name:"interphotoreceptor retinoid binding” AND taxonomy:”Ursidae”`
+
 
