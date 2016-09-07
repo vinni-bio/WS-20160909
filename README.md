@@ -1,11 +1,10 @@
 09/09/2016
 
-# UH Bioinformatics Core Workshop Series:<br/>
-# "An Introduction to Molecular Phylogenetic Inference"
+# UH Bioinformatics Core Workshop Series:<br/>"An Introduction to Molecular Phylogenetic Inference"
 
 ## Lab 1
 
-### Software required for the lab:
+### Software required for the Lab 1:
 * Text editor [TextWrangler](http://www.barebones.com/products/textwrangler/download.html) (Mac Os X) or [Notepad++](https://notepad-plus-plus.org/download/v6.9.2.html) (Windows)
 * [MEGA 7.0](http://www.megasoftware.net/)
 * [Sequence Matrix](http://gaurav.github.io/taxondna/) 
@@ -57,7 +56,7 @@
 3. On the top, open **Edit** menu and select **Insert sequence from file** to add `cytb-outgroup.fasta`
 4. Select all sequences `Ctr+A` and click **MUSCLE** icon on the top bar
 5. Click **Compute**
-6. Trim ends of alignment with gaps
+6. Trim ends of the alignment with gaps
 6. On the top, open **Data** menu and select **Export alignment** to save the results in:
 [cytb.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.fasta)
 7. REPEAT the same procedure for *irbp* gene:
