@@ -1,7 +1,7 @@
 09/09/2016
 
 # UH Bioinformatics Core Workshop Series:<br/>
-"An Introduction to Molecular Phylogenetic Inference"
+# "An Introduction to Molecular Phylogenetic Inference"
 
 ## Lab 1
 
@@ -41,12 +41,25 @@
 6. Press ![BLAST](https://blast.ncbi.nlm.nih.gov/images/blastButtonDown.jpg)
 7. Scroll down through the BLAST results and select the appropriate outgroup sequence(s) with 100% query cover. For example, I chose:
 `Panthera pardus` [AY525041.1](https://www.ncbi.nlm.nih.gov/nuccore/AY525041.1) (Leopard)
-8. Save the outgroup sequence into the 'fasta' file:<br/>
+8. Save the outgroup sequence for *irbp* gene into the 'fasta' file:<br/>
 [irbp-outgroup.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp-outgroup.fasta)
 9. Go to **Nucleotide database**
 10. In the search line, enter:<br/>
 `“mitochondrion”[filter] AND ”Panthera pardus"[ORGN] AND ”complete genome”[TITL]`
-11. Open any item with the complete mitochondrion genome of Panthera pardus (e.g., [KP001507.1](https://www.ncbi.nlm.nih.gov/nuccore/KP001507.1))
-12. Click **Change region show** on the right side bar and select range from 15000 to 16500
-13. Save the outgroup sequence into the 'fasta' file:<br/>
+11. Open any item with the complete mitochondrion genome of *Panthera pardus* (e.g., [KP001507.1](https://www.ncbi.nlm.nih.gov/nuccore/KP001507.1))
+12. Click **Change region shown** on the right side bar and select range from `15000` to `16500`
+13. Save the outgroup sequence for *cytb* gene into the 'fasta' file:<br/>
 [cytb-outgroup.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb-outgroup.fasta)
+
+### D. Multiple sequence alignment with MUSCLE in MEGA 7.0
+1. Open [MEGA 7.0](http://www.megasoftware.net/)
+2. Open **Data** menu and select **Open a File** to open `cytb-ursidae.fasta` file for the alignment
+3. On the top, open **Edit** menu and select **Insert sequence from file** to add `cytb-outgroup.fasta`
+4. Select all sequences `Ctr+A` and click **MUSCLE** icon on the top bar
+5. Click **Compute**
+6. Trim ends of alignment with gaps
+6. On the top, open **Data** menu and select **Export alignment** to save the results in:
+[cytb.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.fasta)
+7. REPEAT the same procedure for *irbp* gene:
+[irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta)
+
