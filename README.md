@@ -174,22 +174,22 @@
 2. Open  `partition_finder.cfg` file in the text editor (e.g., TextWrangler)
 3. Change the name of the alignment to `bears.phy`
 4. Change the data block section as the following:
-```
-cytb_pos1 = 1-1140\3;
-cytb_pos2 = 2-1140\3;
-cytb_pos3 = 3-1140\3;
-irbp_pos1 = 1141-2420\3;
-irbp_pos2 = 1142-2420\3;
-irbp_pos3 = 1143-2420\3;
-```
+<pre><code>
+	cytb_pos1 = 1-1140\3;
+	cytb_pos2 = 2-1140\3;
+	cytb_pos3 = 3-1140\3;
+	irbp_pos1 = 1141-2420\3;
+	irbp_pos2 = 1142-2420\3;
+	irbp_pos3 = 1143-2420\3;
+</code></pre>
 5. Save the file, leaving its original file name:<br/>
 [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg)
 6. Move the [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg) file to the folder with your alignment sequences
 7. Open Terminal (Mac) or Command Prompt (Windows)
 8. Type `python `
 9. Drag and drop `PartitionFinder.py` file to terminal and press space
-10. Drag and drop the folder containing your alignment files and [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg)<br/>
-`python /Users/vinni/Desktop/PartitionFinder.py LAB1/`
+10. Drag and drop the folder containing your alignment files and [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg). Now your command line should like:<br/>
+`python /Users/vinni/Desktop/PartitionFinder.py /Users/vinni/Desktop/LAB2/`
 11. Press **ENTER**
 12. After analysis completion, you should see **analysis** folder within the folder containing your sequence files
 13. Open [best_scheme.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/best_scheme.txt) file in the text editor to see the results
