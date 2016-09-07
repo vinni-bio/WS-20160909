@@ -3,9 +3,9 @@
 # UH Bioinformatics Core Workshop Series:<br/>["An Introduction to Molecular Phylogenetic Inference"](http://uh-bioinformatics.github.io/training/details/phylogenetics/)
 
 ## CONTENTS
-1. [Lab 1](https://github.com/vinni-bio/WS-20160909#lab-1)
-2. [Lab 2](https://github.com/vinni-bio/WS-20160909#lab-2)
-3. [Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
+[Lab 1](https://github.com/vinni-bio/WS-20160909#lab-1)
+[Lab 2](https://github.com/vinni-bio/WS-20160909#lab-2)
+[Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
 
 ## Lab 1
 
@@ -51,7 +51,7 @@
 10. In the search line, enter:<br/>
 `“mitochondrion”[filter] AND ”Panthera pardus"[ORGN] AND ”complete genome”[TITL]`
 11. Open any item with the complete mitochondrion genome of *Panthera pardus* (e.g., [KP001507.1](https://www.ncbi.nlm.nih.gov/nuccore/KP001507.1))
-12. Click **Change region shown** on the right side bar and select range from `15000` to `16500`
+12. Click **Change region shown** on the right side bar and select range from `15000` to `16500`. Click **update**.
 13. Save the outgroup sequence for *cytb* gene into the 'fasta' file:<br/>
 [cytb-outgroup.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb-outgroup.fasta)
 
@@ -95,4 +95,39 @@
 3. In the search line, enter:<br/>
 `name:"interphotoreceptor retinoid binding” AND taxonomy:”Ursidae”`
 
+## Lab 2
 
+### Software required for the Lab 1:
+* [MEGA 7.0](http://www.megasoftware.net/)
+* [jModelTest  v2.1.10](https://drive.google.com/drive/folders/0ByrkKOPtF_n_OUs3d0dNcnJPYXM)
+* [PartitionFinder v.1.1.1](http://www.robertlanfear.com/partitionfinder/)
+* [MrBayes v.3.2.6](http://mrbayes.sourceforge.net/download.php)
+* [FigTree v.1.4.2](http://tree.bio.ed.ac.uk/software/figtree/)
+Optional:
+* [RAXML v8.2.4](https://github.com/stamatak/standard-RAxML)
+
+### A. Import concatenated alignment file to MEGA 7.0
+1. Open top **File** meny and select **Convert file format to MEGA** 
+2. Select [bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex)
+3. Save new file as [bears.meg]((https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
+4. Quit from **_MEGA File Editor and Format Converter_**
+5. Open **Data** menu and select **Open a File** to open [bears.meg]((https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
+
+
+### B. Maximum Parsimony analysis (MP)
+1. Open **Phylogeny** menu and select **Construct/Test Maximum Parsimony Tree** 
+2. Set bootstrap test with 100 replicates
+3. Set gaps for complete deletion
+4. Set SPR as tree search method
+5. Run the analysis
+6. After completion, root the tree with the outgroup
+7. Save the tree as the image file in png format:
+![Maximum Parsimony Tree](../master/LAB2/bears_parsimony.png)
+#### HOMEWORK QUESTIONS:
+* Does the original tree differ from the bootstrap consensus tree?
+* Run the MP analysis with the larger number of bootstrap replications. How did the bootstrap support values change?
+* Run the MP analysis using only 1st and 2nd codon positions. How did the tree topology and bootstrap support values change?
+* Run the MP analysis with different tree search methods. Did the tree topology and bootstrap support values change?
+* Run the MP analysis for two genes separately (open *.fasta files). Does the tree topology differ between the two genes?
+
+### C. Neighbor-Joining test in MEGA 7.0
