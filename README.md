@@ -201,17 +201,19 @@
 ### F. Maximum Likelihood Analysis (ML) with RAxML
 	
 <p><b>Command line tutorial for RAxML:</b></p>
-1. Perform multiple ML searches for the best-scoring trees from parsimony inference:<br/>
+1. Type `raxmlHPC -help` to see the manual for all RAxML commands and settings 
+2. Perform multiple ML searches for the best-scoring trees from parsimony inference:<br/>
 `raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
-2. Conduct 100 bootstrap searches:</br>
+3. Conduct 100 bootstrap searches:</br>
 `raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -b 12345 -n bears_boot -# 100`
-3. Draw bipartitions from bootstrap analysis on the ML tree:<br/>
-`raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`	
+4. Draw bipartitions from bootstrap analysis on the ML tree:<br/>
+`raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`
+5. Open `RAxML_bipartitions.bears_final` in FigTree
 
 <p><b>CIPRES tutorial for RAxML:</b></p>
 1. Go to CIPRES portal: https://www.phylo.org
 2. Click ![Use the CIPRES Science Gateway](http://www.phylo.org/images/interface/blue-button.png)
-3. Click on **_Proceed without Registering_**
+3. Click **_Proceed without Registering_**
 4. Go to your **Data** folder and click **Upload/Enter Data** button
 5. Upload your [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) and [partitions.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partitions.txt) files
 6. Go to your **Task** folder and click **Create New Task**
@@ -247,8 +249,54 @@
 	* Select the Analysis type: `Draw bipartitions onto a single tree topology (-f b)`
 	* Select file with topologies for bipartitions (-z): `RAxML_bootstrap.bears_boot`
 26. Provide the name for your task (e.g., BEARS-FINAL) and click **Save and Run Task**
-27. Download and open `RAxML_bipartitions.bears_final` in FigTree <br/>
+27. Download and open [RAxML_bipartitions.bears_final](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/RAxML_bipartitions.bears_final.txt) in FigTree <br/>
 ![ML tree reconstructed with RAxML](../master/LAB2/bears_ML.png)
+
+### Bayesian analysis with MrBayes
+1. Go to the folder with your multiple sequence alignments:
+	* for Mac users: Open terminal and type `cd <path_to_your_folder>
+	* for Windows users: 
+2. Start MrBayes program by typing `mb` in Mac Os terminal or by executing mrbayes.exe program in Windows
+3. To read the help menu, type `MrBayes > help`
+4. Read the file with multiple sequence alignment:<br/>
+`MrBayes > execute LAB2/bears.nex`
+5. Define gene partitions in your sequences:
+<pre><code>MrBayes > charset cytb = 1-1140
+MrBayes > charset irbp = 1141-2420 
+MrBayes > partition by_gene = 2: cytb,irbp
+MrBayes > set partition = by_gene</code></pre>
+6. Check the default model settings:<br/>
+`MrBayes > showmodel`<br/>
+or<br/>
+`MrBayes > help lset`
+7. Change the model settings for each partition:
+<pre><code>MrBayes > lset applyto=(1) code=vertmt nst=2 rates=gamma
+MrBayes > lset applyto=(2) nst=2 rates=gamma</code></pre>
+8. Check the default prior settings:<br/>
+`MrBayes > help prset`
+9. Change the prior settings for each partition:<br/>
+<pre><code>MrBayes > unlink statefreq=(all) shape=(all) revmat=(all)
+MrBayes > prset applyto=(1) shapepr = exponential(10.0)</code></pre>
+10. Check the default mcmc settings:<br/>
+`MrBayes > help mcmcp`
+11. Change the mcmc settings
+`MrBayes > mcmcp ngen=1000000 nruns=2 nchains=2 samplefreq=200 burninfrac=0.2`
+12. Run the mcmc search:<br/>
+`MrBayes > mcmc`
+13. Summarize the mcmc search information and build the tree:
+<pre><code>MrBayes > sump
+MrBayes > sump</code></pre>
+14. Quit the MrBayes program<br/>
+`MrBayes > quit`
+15. Open consensus tree [bears.nex.con.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.nex.con.tre) in FigTree
+![Bayesian tree reconstructed with MrBayes](../master/LAB2/bears_BA.png)
+
+
+
+
+
+
+
 
 
 
