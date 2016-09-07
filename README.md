@@ -2,6 +2,11 @@
 
 # UH Bioinformatics Core Workshop Series:<br/>["An Introduction to Molecular Phylogenetic Inference"](http://uh-bioinformatics.github.io/training/details/phylogenetics/)
 
+## CONTENTS
+1. [Lab 1](https://github.com/vinni-bio/WS-20160909#lab-1)
+2. [Lab 2](https://github.com/vinni-bio/WS-20160909#lab-2)
+3. [Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
+
 ## Lab 1
 
 ### Software required for the Lab 1:
