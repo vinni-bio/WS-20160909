@@ -3,9 +3,9 @@
 # UH Bioinformatics Core Workshop Series:<br/>["An Introduction to Molecular Phylogenetic Inference"](http://uh-bioinformatics.github.io/training/details/phylogenetics/)
 
 ## CONTENTS
-[Lab 1](https://github.com/vinni-bio/WS-20160909#lab-1)
-[Lab 2](https://github.com/vinni-bio/WS-20160909#lab-2)
-[Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
+* [Lab 1](https://github.com/vinni-bio/WS-20160909#lab-1)
+* [Lab 2](https://github.com/vinni-bio/WS-20160909#lab-2)
+* [Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
 
 ## Lab 1
 
@@ -103,15 +103,14 @@
 * [PartitionFinder v.1.1.1](http://www.robertlanfear.com/partitionfinder/)
 * [MrBayes v.3.2.6](http://mrbayes.sourceforge.net/download.php)
 * [FigTree v.1.4.2](http://tree.bio.ed.ac.uk/software/figtree/)
-Optional:
-* [RAXML v8.2.4](https://github.com/stamatak/standard-RAxML)
+* [RAXML v8.2.4](https://github.com/stamatak/standard-RAxML)(Optional)
 
 ### A. Import concatenated alignment file to MEGA 7.0
 1. Open top **File** meny and select **Convert file format to MEGA** 
 2. Select [bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex)
-3. Save new file as [bears.meg]((https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
-4. Quit from **_MEGA File Editor and Format Converter_**
-5. Open **Data** menu and select **Open a File** to open [bears.meg]((https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
+3. Save new file as [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
+4. Quit from **MEGA _File Editor and Format Converter_**
+5. Open **Data** menu and select **Open a File** to open [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
 
 
 ### B. Maximum Parsimony analysis (MP)
@@ -123,6 +122,7 @@ Optional:
 6. After completion, root the tree with the outgroup
 7. Save the tree as the image file in png format:
 ![Maximum Parsimony Tree](../master/LAB2/bears_parsimony.png)
+
 #### HOMEWORK QUESTIONS:
 * Does the original tree differ from the bootstrap consensus tree?
 * Run the MP analysis with the larger number of bootstrap replications. How did the bootstrap support values change?
