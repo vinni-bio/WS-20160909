@@ -200,7 +200,7 @@
   
 ### F. Maximum Likelihood Analysis (ML) with RAxML
 	
-Command line tutorial for RAxML:
+<p>Command line tutorial for RAxML:</p>
 1. Perform multiple ML searches for the best-scoring trees from parsimony inference:<br/>
 `raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
 2. Conduct 100 bootstrap searches:</br>
@@ -208,5 +208,31 @@ Command line tutorial for RAxML:
 3. Draw bipartitions from bootstrap analysis on the ML tree:<br/>
 `raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`	
 
-CIPRES tutorial for RAxML:
-	
+<p>CIPRES tutorial for RAxML</p>:
+1. Go to CIPRES portal: https://www.phylo.org
+2. Click ![Use the CIPRES Science Gateway](http://www.phylo.org/images/interface/blue-button.png)
+3. Click on **_Proceed without Registering_**
+4. Go to your **Data** folder and click **Upload/Enter Data** button
+5. Upload your [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) and [partitions.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partitions.txt) files
+6. Go to your **Task** folder and click **Create New Task**
+7. Select [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) as your input data
+8. Select **RAxML-HPC v.8 on XSEDE** as your tool
+9. In **Simple parameters** window:
+	* Set the name for search output: `bears_ML`
+	* Select the file with sequence partitions (-q): `partitions.txt`
+10. In **Advanced parameters** window, go to **Configure the Analysis**:
+	* Click on specify the number of alternative runs on distinct starting trees
+	* Enter the number of alternative runs: `20`
+11. Provide the name for your task (e.g., BEARS-ML) and click **Save and Run Task**
+12. Click **Create New Task**
+13. Select [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) as your input data
+14. Select **RAxML-HPC v.8 on XSEDE** as your tool
+15. In **Simple parameters** window:
+	* Set the name for search output: `bears_boot`
+	* Select the file with sequence partitions (-q): `partitions.txt`
+16. In **Advanced parameters** window, go to **Configure Bootstrapping**:
+	* Select **Non-parametric Boostrapping (-b)**
+	* Enter the appropriate number of bootstrap iterations (or leave it as a default): `100`
+17. Provide the name for your task (e.g., BEARS-BOOTSTRAP) and click **Save and Run Task**
+18. Go to your **Data** folder and click **Upload/Enter Data** button
+19. 
