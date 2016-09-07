@@ -10,6 +10,7 @@
   3. [Homework on Model Selection](https://github.com/vinni-bio/WS-20160909#homework-questions-model-selection)
   4. [Homework on Sequence Partition Analysis](https://github.com/vinni-bio/WS-20160909#homework-questions-partition-analysis)
 * [Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
+  1. [Homework on Model-based methods](https://github.com/vinni-bio/WS-20160909#homework-questions-likelihood-and-bayesian-methods)
 
 ## Lab 1
 
@@ -343,7 +344,7 @@ MrBayes > sumt</code></pre>
 ![Bayesian tree reconstructed and calibrated with BEAST](../master/LAB3/bears_beast.png)
 
 #### HOMEWORK QUESTIONS (Likelihood and Bayesian methods):
-	* Compare the topology, branch lengths and node support values between RAxML, MrBayes and BEAST trees. How do they differ?
-	* For BEAST analysis, increase the number of mcmc steps in a chain (e.g., #10,000,000). Does it change the high posterior densities (HPDs) for nodes? Are the effective sample sizes (ESS) for parameter estimates above 200 (check new log file in Tracer)?
-	* Repeat the previous run one more time and compare both log files in the Tracer. Did their distributions converge?
-	* Add more fossil calibrations in the BEAST analysis. Did the high posterior density intervals (HPDs) for node calibrations become narrower or wider?
+  * Compare the topology, branch lengths and node support values between RAxML, MrBayes and BEAST trees. How do they differ?
+  * For BEAST analysis, increase the number of mcmc steps in a chain (e.g., #10,000,000). Does it change the high posterior densities (HPDs) for nodes? Are the effective sample sizes (ESS) for parameter estimates above 200 (check new log file in Tracer)?
+  * Repeat the previous run one more time and compare both log files in the Tracer. Did their distributions converge?
+  * Add more fossil calibrations in the BEAST analysis. Did the high posterior density intervals (HPDs) for node calibrations become narrower or wider?
