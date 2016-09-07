@@ -200,13 +200,13 @@
   
 ### F. Maximum Likelihood Analysis (ML) with RAxML
 	
-	Command line tutorial for RAxML:
-	1. Perform multiple ML searches for the best-scoring trees from parsimony inference:<br/>
-	`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
-	2. Conduct 100 bootstrap searches:</br>
-	`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -b 12345 -n bears_boot -# 100`
-	3. Draw bipartitions from bootstrap analysis on the ML tree:<br/>
-	`raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`	
+Command line tutorial for RAxML:
+1. Perform multiple ML searches for the best-scoring trees from parsimony inference:<br/>
+`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
+2. Conduct 100 bootstrap searches:</br>
+`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -b 12345 -n bears_boot -# 100`
+3. Draw bipartitions from bootstrap analysis on the ML tree:<br/>
+`raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`	
 
-	CIPRES tutorial for RAxML:
+CIPRES tutorial for RAxML:
 	
