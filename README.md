@@ -4,9 +4,10 @@
 
 ## CONTENTS
 * [Lab 1](https://github.com/vinni-bio/WS-20160909#lab-1)
-  1. [Homework on Maximum Parsimony](https://github.com/vinni-bio/WS-20160909#homework-questions)
-  2. [Homework on Distance Methods](https://github.com/vinni-bio/WS-20160909#homework-questions)
 * [Lab 2](https://github.com/vinni-bio/WS-20160909#lab-2)
+  1. [Homework on Maximum Parsimony](https://github.com/vinni-bio/WS-20160909#homework-questions-maximum-parsimony)
+  2. [Homework on Distance-matrix methods](https://github.com/vinni-bio/WS-20160909#homework-questions-distance-matrix-methods)
+  3. [Homework on Model Selection](https://github.com/vinni-bio/WS-20160909#homework-questions-model-selection)
 * [Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
 
 ## Lab 1
@@ -108,11 +109,12 @@
 * [RAXML v8.2.4](https://github.com/stamatak/standard-RAxML)(Optional)
 
 ### A. Import concatenated alignment file to MEGA 7.0
-1. Open top **File** meny and select **Convert file format to MEGA** 
-2. Select [bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex)
-3. Save new file as [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
-4. Quit from **MEGA _File Editor and Format Converter_**
-5. Open **Data** menu and select **Open a File** to open [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
+1. Open [MEGA 7.0](http://www.megasoftware.net/)
+2. Open top **File** meny and select **Convert file format to MEGA** 
+3. Select [bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex)
+4. Save new file as [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
+5. Quit from **MEGA _File Editor and Format Converter_**
+6. Open **Data** menu and select **Open a File** to open [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
 
 
 ### B. Maximum Parsimony analysis (MP)
@@ -148,4 +150,44 @@
   * Run the NJ analysis using only 1st and 2nd codon positions. How did the tree topology and bootstrap support values change?
   * Run the NJ analysis with different substitution models. How did the tree topology and bootstrap support values change?
   * How does the tree topology differ between the corresponding NJ and MP trees?
+
+### D. Model Selection with jModelTest
+1. Start the program [jModelTest.jar](https://drive.google.com/drive/folders/0ByrkKOPtF_n_OUs3d0dNcnJPYXM)
+2. Load the alignment file for *cytb* gene: [cytb.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.nex)
+3. In **Analysis** menu on the top, select **_Compute Likelihood scores_**
+4. Select search through 7 substitution schemes and run the analysis
+5. In **Analysis** menu on the top, select **AIC**, **AICc**, **BIC** or **DT** (you can do it by clicking on the menu of each criteria one after another)
+6. In **Results** menu on the top, click **_Show results table_**
+7. Sort the results by the column containing criterion scores 
+8. Check the parameters of each selected model in the program console window
+9. REPEAT the same procedure for *irbp* gene: [irbp.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.nex)
+ 
+#### HOMEWORK QUESTIONS (Model Selection):
+  * Do all four criteria support the same model?
+  * If not, check how chosen models differ from each other by comparing their parameters (use the table provided on the lecture slide).
+  * Compare the model chosen by AICc with the model that has the closest AICc score to it. How strong is the difference between the models (check **delta**)? Which parameters are different between these two models?
+  * Which model would you choose for the following phylogenetic inference? Explain why.
+  * Do *irbp* and *cytb* genes have similar substitution models? If not, explain how they differ.
+
+### E. Search for Sequence Partitions with [PartitionFinder](http://www.robertlanfear.com/partitionfinder/)
+1. Open examples/nucleotide folder and copy `partition_finder.cfg` to the folder with your alignment files
+2. Open  `partition_finder.cfg` file in the text editor (e.g., TextWrangler)
+3. Change the name of the alignment to `bears.phy`
+4. Change the data block section as the following:<br/>
+```
+cytb_pos1 = 1-1140\3;
+cytb_pos2 = 2-1140\3;
+cytb_pos3 = 3-1140\3;
+irbp_pos1 = 1141-2420\3;
+irbp_pos2 = 1142-2420\3;
+irbp_pos3 = 1143-2420\3;
+```
+5. Save the file leaving its original file name:<br/>
+[partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg)
+6. Move the partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg) file to the folder with your alignment sequences
+7. Open Terminal (Mac) or Command Prompt (Windows)
+8. Type `python `
+9. Drag and drop `PartitionFinder.py` file to terminal and press space
+10. Drag and drop the folder containing your alignment files and `partition_finder.cfg`
+```python /Users/vinni/Desktop/PartitionFinder.py LAB1/```
 
