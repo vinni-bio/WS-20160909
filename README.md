@@ -217,20 +217,20 @@
 6. Go to your **Task** folder and click **Create New Task**
 7. Select [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) as your input data
 8. Select **RAxML-HPC v.8 on XSEDE** as your tool
-9. In **Simple parameters** window:
+9. In **Simple parameters** section:
 	* Set the name for search output: `bears_ML`
 	* Select the file with sequence partitions (-q): `partitions.txt`
-10. In **Advanced parameters** window, go to **Configure the Analysis**:
+10. In **Advanced parameters** section, go to **Configure the Analysis**:
 	* Click on specify the number of alternative runs on distinct starting trees
 	* Enter the number of alternative runs: `20`
 11. Provide the name for your task (e.g., BEARS-ML) and click **Save and Run Task**
 12. Click **Create New Task**
 13. Select [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) as your input data
 14. Select **RAxML-HPC v.8 on XSEDE** as your tool
-15. In **Simple parameters** window:
+15. In **Simple parameters** section:
 	* Set the name for search output: `bears_boot`
 	* Select the file with sequence partitions (-q): `partitions.txt`
-16. In **Advanced parameters** window, go to **Configure Bootstrapping**:
+16. In **Advanced parameters** section, go to **Configure Bootstrapping**:
 	* Select **Non-parametric Boostrapping (-b)**
 	* Enter the appropriate number of bootstrap iterations (or leave it as a default): `100`
 17. Provide the name for your task (e.g., BEARS-BOOTSTRAP) and click **Save and Run Task**
@@ -240,6 +240,15 @@
 21. Go to your **Task** folder and click **Create New Task**
 22. Select [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) as your input data
 23. Select **RAxML-HPC v.8 on XSEDE** as your tool
-24. In **Simple parameters** window:
+24. In **Simple parameters** section:
 	* Set the name for search output: `bears_final`
-	* 
+	* Supply a tree (-t): `RAxML_bestTree.bears_ML`
+25. In **Advanced parameters** section, go to ** Configure the Analysis**:
+	* Select the Analysis type: `Draw bipartitions onto a single tree topology (-f b)`
+	* Select file with topologies for bipartitions (-z): `RAxML_bootstrap.bears_boot`
+26. Provide the name for your task (e.g., BEARS-FINAL) and click **Save and Run Task**
+27. Download and open `RAxML_bipartitions.bears_final` in FigTree
+![ML tree reconstructed with RAxML](../master/LAB2/bears_ML.png)
+
+
+
