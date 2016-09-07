@@ -208,7 +208,7 @@
 3. Draw bipartitions from bootstrap analysis on the ML tree:<br/>
 `raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`	
 
-<p>CIPRES tutorial for RAxML</p>:
+<p>CIPRES tutorial for RAxML:</p>
 1. Go to CIPRES portal: https://www.phylo.org
 2. Click ![Use the CIPRES Science Gateway](http://www.phylo.org/images/interface/blue-button.png)
 3. Click on **_Proceed without Registering_**
@@ -234,5 +234,12 @@
 	* Select **Non-parametric Boostrapping (-b)**
 	* Enter the appropriate number of bootstrap iterations (or leave it as a default): `100`
 17. Provide the name for your task (e.g., BEARS-BOOTSTRAP) and click **Save and Run Task**
-18. Go to your **Data** folder and click **Upload/Enter Data** button
-19. 
+18. Download `RAxML_bestTree.bears_ML` and `RAxML_bootstrap.bears_boot` files
+19. Go to your **Data** folder and click **Upload/Enter Data** button
+20. Upload `RAxML_bestTree.bears_ML` and `RAxML_bootstrap.bears_boot` files
+21. Go to your **Task** folder and click **Create New Task**
+22. Select [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy) as your input data
+23. Select **RAxML-HPC v.8 on XSEDE** as your tool
+24. In **Simple parameters** window:
+	* Set the name for search output: `bears_final`
+	* 
