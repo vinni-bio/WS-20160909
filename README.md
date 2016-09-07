@@ -4,8 +4,8 @@
 
 ## CONTENTS
 * [Lab 1](https://github.com/vinni-bio/WS-20160909#lab-1)
-- [Homework on Maximum Parsimony](https://github.com/vinni-bio/WS-20160909#homework-questions)
-- [Homework on Distance Methods](https://github.com/vinni-bio/WS-20160909#homework-questions)
+..1. [Homework on Maximum Parsimony](https://github.com/vinni-bio/WS-20160909#homework-questions)
+..2. [Homework on Distance Methods](https://github.com/vinni-bio/WS-20160909#homework-questions)
 * [Lab 2](https://github.com/vinni-bio/WS-20160909#lab-2)
 * [Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
 
