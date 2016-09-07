@@ -4,8 +4,8 @@
 
 ## CONTENTS
 * [Lab 1](https://github.com/vinni-bio/WS-20160909#lab-1)
-..1. [Homework on Maximum Parsimony](https://github.com/vinni-bio/WS-20160909#homework-questions)
-..2. [Homework on Distance Methods](https://github.com/vinni-bio/WS-20160909#homework-questions)
+  1. [Homework on Maximum Parsimony](https://github.com/vinni-bio/WS-20160909#homework-questions)
+  2. [Homework on Distance Methods](https://github.com/vinni-bio/WS-20160909#homework-questions)
 * [Lab 2](https://github.com/vinni-bio/WS-20160909#lab-2)
 * [Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
 
@@ -126,10 +126,11 @@
 ![Maximum Parsimony Tree](../master/LAB2/bears_parsimony.png)
 
 #### HOMEWORK QUESTIONS (Maximum Parsimony):
-* Does the original tree differ from the bootstrap consensus tree?
-* Run the MP analysis with the larger number of bootstrap replications. How did the bootstrap support values change?
-* Run the MP analysis using only 1st and 2nd codon positions. How did the tree topology and bootstrap support values change?
-* Run the MP analysis with different tree search methods. Did the tree topology and bootstrap support values change?
-* Run the MP analysis for two genes separately (open *.fasta files). Does the tree topology differ between the two genes?
+  1. Does the original tree differ from the bootstrap consensus tree?
+  2. Run the MP analysis with the larger number of bootstrap replications. How did the bootstrap support values change?
+  3. Run the MP analysis using only 1st and 2nd codon positions. How did the tree topology and bootstrap support values change?
+  4. Run the MP analysis with different tree search methods. Did the tree topology and bootstrap support values change?
+  5. Run the MP analysis for two genes separately (open *.fasta files). Does the tree topology differ between the two genes?
 
 ### C. Neighbor-Joining test in MEGA 7.0
+1. 
