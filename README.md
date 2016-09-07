@@ -25,11 +25,11 @@
 2. In the search line, enter:
 `"Yu L"[AUTH] AND "Ursidae"[ORGN] AND "irbp"[TITL]`
 3. Save sequences into 'fasta' file :<br/>
-[ursidae-irbp.fasta](../blob/master/LAB1/irbp-ursidae.fasta)
+[ursidae-irbp.fasta](../master/LAB1/irbp-ursidae.fasta)
 4. In the search line, enter:<br/>
 `“mitochondrion”[filter] AND "Ursidae"[ORGN] AND "Talbot SL"[Author] AND 1140[SLEN]`
 5. Save sequences into 'fasta' file:</br> 
-[ursidae-cytb.fasta](../blob/master/LAB1/cytb-ursidae.fasta)
+[ursidae-cytb.fasta](../master/LAB1/cytb-ursidae.fasta)
 
 ### C. Select the outgroup
 1. Open **Resources** on the top menu
@@ -42,11 +42,11 @@
 7. Scroll down through the BLAST results and select the appropriate outgroup sequence(s) with 100% query cover. For example, I chose:
 `Panthera pardus` [AY525041.1](https://www.ncbi.nlm.nih.gov/nuccore/AY525041.1) (Leopard)
 8. Save the outgroup sequence into the 'fasta' file:<br/>
-[irbp-outgroup.fasta](../blob/master/LAB1/irbp-outgroup.fasta)
+[irbp-outgroup.fasta](../master/LAB1/irbp-outgroup.fasta)
 9. Go to **Nucleotide database**
 10. In the search line, enter:<br/>
 `“mitochondrion”[filter] AND ”Panthera pardus"[ORGN] AND ”complete genome”[TITL]`
 11. Open any item with the complete mitochondrion genome of Panthera pardus (e.g., [KP001507.1](https://www.ncbi.nlm.nih.gov/nuccore/KP001507.1)
 12. Click **Change region show** on the right side bar and select range from 15000 to 16500
 13. Save the outgroup sequence into the 'fasta' file:<br/>
-[cytb-outgroup.fasta](../blob/master/LAB1/cytb-outgroup.fasta)
+[cytb-outgroup.fasta](../master/LAB1/cytb-outgroup.fasta)
