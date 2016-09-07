@@ -175,7 +175,7 @@
 3. Change the name of the alignment to `bears.phy`
 4. Change the data block section as the following:<br/>
     ```
-     cytb_pos1 = 1-1140\3;
+     cytb_pos1 = 1-1140\3;<br/>
      cytb_pos2 = 2-1140\3;
      cytb_pos3 = 3-1140\3;
      irbp_pos1 = 1141-2420\3;
