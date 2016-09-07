@@ -4,6 +4,8 @@
 
 ## CONTENTS
 * [Lab 1](https://github.com/vinni-bio/WS-20160909#lab-1)
+- [Homework on Maximum Parsimony](https://github.com/vinni-bio/WS-20160909#homework-questions)
+- [Homework on Distance Methods](https://github.com/vinni-bio/WS-20160909#homework-questions)
 * [Lab 2](https://github.com/vinni-bio/WS-20160909#lab-2)
 * [Lab 3](https://github.com/vinni-bio/WS-20160909#lab-3)
 
@@ -123,7 +125,7 @@
 7. Save the tree as the image file in png format:
 ![Maximum Parsimony Tree](../master/LAB2/bears_parsimony.png)
 
-#### HOMEWORK QUESTIONS:
+#### HOMEWORK QUESTIONS (Maximum Parsimony):
 * Does the original tree differ from the bootstrap consensus tree?
 * Run the MP analysis with the larger number of bootstrap replications. How did the bootstrap support values change?
 * Run the MP analysis using only 1st and 2nd codon positions. How did the tree topology and bootstrap support values change?
