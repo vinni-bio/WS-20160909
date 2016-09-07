@@ -171,7 +171,7 @@
   * Do *irbp* and *cytb* genes have similar substitution models? If not, explain how they differ.
 
 ### E. Search for Sequence Partitions with [PartitionFinder](http://www.robertlanfear.com/partitionfinder/)
-1. Open examples/nucleotide folder and copy `partition_finder.cfg` to the folder with your alignment files
+1. Open `PartitionFinderV1.1.1/examples/nucleotide/` folder and copy `partition_finder.cfg` to the folder with your alignment files
 2. Open  `partition_finder.cfg` file in the text editor (e.g., TextWrangler)
 3. Change the name of the alignment to `bears.phy`
 4. Change the data block section as the following:
@@ -181,12 +181,12 @@
 	irbp_pos1 = 1141-2420\3;
 	irbp_pos2 = 1142-2420\3;
 	irbp_pos3 = 1143-2420\3;</code></pre>
-5. Save the file, leaving its original file name, in the folder with your alignment sequences:<br/>
+5. Save the file, leaving its original file name, in the folder with your alignment files:<br/>
 [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg)
 6. Open Terminal (Mac) or Command Prompt (Windows)
 7. Type `python `
 8. Drag and drop `PartitionFinder.py` file to the terminal window and press space
-9. Drag and drop the folder containing your alignment files and [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg). <br/>Now your terminal command line should like:<br/>
+9. Drag and drop the folder containing your alignment files and [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg). <br/>Now your terminal command line should somewhat similar to:<br/>
 `python /Users/vinni/Desktop/PartitionFinder.py /Users/vinni/Desktop/LAB2/`
 10. Press **ENTER**
 11. After analysis completion, you should see **analysis** folder within the folder containing your sequence files
@@ -198,7 +198,15 @@
   * How many partitions have been revealed in your alignment data?
   * Do the partition models correspond with the models that you have obtained in the jModelTest analysis?
   
+### F. Maximum Likelihood Analysis (ML) with RAxML
+	
+	Command line tutorial for RAxML:
+	1. Perform multiple ML searches for the best-scoring trees from parsimony inference:<br/>
+	`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
+	2. Conduct 100 bootstrap searches:</br>
+	`raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -b 12345 -n bears_boot -# 100`
+	3. Draw bipartitions from bootstrap analysis on the ML tree:<br/>
+	`raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`	
 
-
-
-
+	CIPRES tutorial for RAxML:
+	
