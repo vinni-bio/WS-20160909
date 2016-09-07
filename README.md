@@ -181,18 +181,17 @@
 	irbp_pos1 = 1141-2420\3;
 	irbp_pos2 = 1142-2420\3;
 	irbp_pos3 = 1143-2420\3;</code></pre>
-5. Save the file, leaving its original file name:<br/>
+5. Save the file, leaving its original file name, in the folder with your alignment sequences:<br/>
 [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg)
-6. Move the [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg) file to the folder with your alignment sequences
-7. Open Terminal (Mac) or Command Prompt (Windows)
-8. Type `python `
-9. Drag and drop `PartitionFinder.py` file to the terminal and press space
-10. Drag and drop the folder containing your alignment files and [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg). <br/>Now your command line should like:<br/>
+6. Open Terminal (Mac) or Command Prompt (Windows)
+7. Type `python `
+8. Drag and drop `PartitionFinder.py` file to the terminal window and press space
+9. Drag and drop the folder containing your alignment files and [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg). <br/>Now your terminal command line should like:<br/>
 `python /Users/vinni/Desktop/PartitionFinder.py /Users/vinni/Desktop/LAB2/`
-11. Press **ENTER**
-12. After analysis completion, you should see **analysis** folder within the folder containing your sequence files
-13. Open [best_scheme.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/best_scheme.txt) file in the text editor to see the results
-14. Copy and save the RAxML partition section into a separate file:<br/>
+10. Press **ENTER**
+11. After analysis completion, you should see **analysis** folder within the folder containing your sequence files
+12. Open [best_scheme.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/best_scheme.txt) file in the text editor to see the results
+13. Copy and save the RAxML partition section into a separate text file:<br/>
 [partitions.txt](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partitions.txt)
 
 #### HOMEWORK QUESTIONS (Partition Analysis):
