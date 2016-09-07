@@ -9,7 +9,7 @@
 * [MEGA 7.0](http://www.megasoftware.net/)
 * [Sequence Matrix](http://gaurav.github.io/taxondna/) 
 
-### A. Check the number of GenBank entrees for the group of interest (Bears)
+### A. Check the number of GenBank entrees for the group of interest (i.e., Bears)
 1. Go to http://www.ncbi.nlm.nih.gov
 2. Find and click **All Resources** button in the left side bar
 3. In the list of all databases, find and click **Nucleotide Database**
@@ -24,11 +24,11 @@
 2. In the search line, enter:
 `"Yu L"[AUTH] AND "Ursidae"[ORGN] AND "irbp"[TITL]`
 3. Save sequences into 'fasta' file :<br/>
-[ursidae-irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp-ursidae.fasta)
+[irbp-ursidae.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp-ursidae.fasta)
 4. In the search line, enter:<br/>
 `“mitochondrion”[filter] AND "Ursidae"[ORGN] AND "Talbot SL"[Author] AND 1140[SLEN]`
 5. Save sequences into 'fasta' file:</br> 
-[ursidae-cytb.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb-ursidae.fasta)
+[cytb-ursidae.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb-ursidae.fasta)
 
 ### C. Select the outgroup
 1. Open **Resources** on the top menu
@@ -52,13 +52,41 @@
 
 ### D. Multiple sequence alignment with MUSCLE in MEGA 7.0
 1. Open [MEGA 7.0](http://www.megasoftware.net/)
-2. Open **Data** menu and select **Open a File** to open `cytb-ursidae.fasta` file for the alignment
+2. Open **Data** menu and select **Open a File** to open [cytb-ursidae.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb-ursidae.fasta) file for the alignment
 3. On the top, open **Edit** menu and select **Insert sequence from file** to add `cytb-outgroup.fasta`
 4. Select all sequences `Ctr+A` and click **MUSCLE** icon on the top bar
 5. Click **Compute**
 6. Trim ends of the alignment with gaps
 6. On the top, open **Data** menu and select **Export alignment** to save the results in:<br/>
 [cytb.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.fasta)
-7. REPEAT the same procedure for *irbp* gene:<br/>
+7. REPEAT the same procedure with *irbp* gene:<br/>
 [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta)
+
+### E. Sequence file format conversion
+1. Open [Sequence Matrix](http://gaurav.github.io/taxondna/) program
+2. Drag and drop [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta) file to Sequence Matrix window 
+3. Click **Use species names**
+4. Export sequences in Nexus format ("naked" Nexus for GARLI):<br/>
+[irbp.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.nex) 
+5. Export sequences as Phylip (RAxML)<br/>
+[irbp.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.phy)
+6. In the top **File** menu, select **Clear all sequences**
+6. Drag and drop [cytb.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.fasta) file to Sequence Matrix window
+7. Click **Use species names**
+8. Export sequences in Nexus format ("naked" Nexus for GARLI):<br/>
+[cytb.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.nex) 
+9. Export sequences as Phylip (RAxML)<br/>
+[cytb.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.phy)
+10. Drag and drop [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta) file to Sequence Matrix window 
+11. Export sequences in Nexus format ("naked" Nexus for GARLI):<br/>
+[bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex) 
+12. Export sequences as Phylip (RAxML)<br/>
+[bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy)
+
+### F. Check the entrees for *irbp* protein in UniProt Database
+1. Go to http://www.uniprot.org/
+2. In the search line, enter:
+`name:"interphotoreceptor retinoid binding"`
+3. In the search line, enter:
+`name:"interphotoreceptor retinoid binding” taxonomy:”Ursidae”`
 
