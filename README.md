@@ -1,6 +1,6 @@
 09/09/2016
 
-# UH Bioinformatics Core Workshop Series:<br/>"An Introduction to Molecular Phylogenetic Inference"
+# UH Bioinformatics Core Workshop Series:<br/>["An Introduction to Molecular Phylogenetic Inference"](http://uh-bioinformatics.github.io/training/details/phylogenetics/)
 
 ## Lab 1
 
@@ -57,8 +57,8 @@
 4. Select all sequences `Ctr+A` and click **MUSCLE** icon on the top bar
 5. Click **Compute**
 6. Trim ends of the alignment with gaps
-6. On the top, open **Data** menu and select **Export alignment** to save the results in:
+6. On the top, open **Data** menu and select **Export alignment** to save the results in:<br/>
 [cytb.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.fasta)
-7. REPEAT the same procedure for *irbp* gene:
+7. REPEAT the same procedure for *irbp* gene:<br/>
 [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta)
 
