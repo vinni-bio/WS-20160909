@@ -287,25 +287,61 @@ MrBayes > prset applyto=(1) shapepr = exponential(10.0)</code></pre>
 MrBayes > sumt</code></pre>
 14. Quit the MrBayes program<br/>
 `MrBayes > quit`
-15. Open consensus tree [bears.nex.con.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.nex.con.tre) in FigTree
+15. Open the consensus tree [bears.nex.con.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.nex.con.tre) in FigTree
 ![Bayesian tree reconstructed with MrBayes](../master/LAB2/bears_BA.png)
 
 ## Lab 3
 
-### Software required for the Lab 2:
+### Software required for the Lab 3:
 * [Tracer v.1.6](http://tree.bio.ed.ac.uk/software/tracer/)
 * [BEAST v.2.4.3](http://beast2.org/)
 
 ### A. MCMC Diagnostics
-1. Open **Tracer** program
-2. Upload [bears.nex.run1.p](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.nex.run1.p) and [bears.nex.run2.p](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.nex.run2.p) trace files obtained from MrBayes analysis
+1. Open [Tracer](http://tree.bio.ed.ac.uk/software/tracer/) program
+2. Upload [bears.nex.run1.p](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.nex.run1.p) and [bears.nex.run2.p](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.nex.run2.p) trace files obtained during the MrBayes analysis
 3. Check the convergence between mcmc runs
 4. Check stability of the mcmc search on the Trace diagram 
 5. Compare the marginal probability distributions of the alpha rate parameter between the two genes
 
 ### B. Tree calibration in BEAST
-
-
-
-
-
+1. Open **BEAUti** program in [BEAST](http://beast2.org/) package
+2. Load the alignments: [cytb.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/cytb8.nex) and [irbp.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/irbp8.nex) (the outgroup must be removed in the text editor)
+3. Link clock model and tree for the genes
+4. Set substitution models for the genes:
+	* Set `4` categories for GAMMA
+	* Set `HKY` model for both genes
+	* Put check marks for estimating substitution rates and gamma shape parameters
+5. Select `Relaxed Clock Log Normal` model (UCLN)
+6. In order to estimate the clock rate parameter, first uncheck `Automatic set clock rate` in **Mode** top menu
+7. For Prior settings:
+	* Select `Birth-Death Model`
+	* Put check mark for `Conditional on root`
+	* Change alpha shape parameter for *cytb* gene to `10`
+	* Set the exponential distribution (with initial value=10) for **_ucldMean.c:bears\_clock_** parameter
+8. Click **+** sign to add Bear Crown fossil prior:
+	* Select `Log Normal` distribution
+	* Put check mark on `monophyletic`
+	* Put check mark for the `Mean in Real Space`
+	* Set **Offset** to `11.2`
+	* Set **Mean** to `0.3`
+	* Set **Standard deviation* to `0.8`
+9. Change MCMC search settings:
+	* Chain Length: `1000000`
+	* Pre Burnin: `100000`
+	* Log Every: `500`
+10. Save the file to [bears.xml](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.xml)
+11. Open [bears.xml](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.xml) file in BEAST and run the analysis
+12. Check the posterior probability distributions from [bears.log](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.log) file in Tracer
+13. Open the BEAST trees in TreeAnnotator
+	* Set Burnin percentage: `20`
+	* Select the `Maximum Clade credibility tree`
+	* Select Node heights: `Mean heights`
+	* Select the input file: [bears_tree.trees](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears_tree.trees)
+	* Provide the name for the output file: `bears_final_beast.tre`
+14. Open the consensus tree [bears_final_beast.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears_final_beast.tre) with FigTree
+![Bayesian tree reconstructed and calibrated with BEAST](../master/LAB3/bears_BEAST.png)
+#### HOMEWORK QUESTIONS (Likelihood and Bayesian methods):
+	* Compare the topology, branch lengths and node support values between RAxML, MrBayes and BEAST trees. How do they differ?
+	* For BEAST analysis, increase the number of mcmc steps in a chain (e.g., #10,000,000). Does it change the high posterior densities (HPDs) for nodes? Are the effective sample sizes (ESS) for parameter estimates above 200 (check new log file in Tracer)?
+	* Repeat the previous run one more time and compare both log files in the Tracer. Did their distributions converge?
+	* Add more fossil calibrations in the BEAST analysis. Did the high posterior density intervals (HPDs) for node calibrations become narrower or wider?
