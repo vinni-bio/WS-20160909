@@ -101,7 +101,7 @@
 
 ## Lab 2
 
-### Software required for the Lab 1:
+### Software required for the Lab 2:
 * [MEGA 7.0](http://www.megasoftware.net/)
 * [jModelTest  v2.1.10](https://drive.google.com/drive/folders/0ByrkKOPtF_n_OUs3d0dNcnJPYXM)
 * [PartitionFinder v.1.1.1](http://www.robertlanfear.com/partitionfinder/)
@@ -252,19 +252,18 @@
 27. Download and open [RAxML_bipartitions.bears_final](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/RAxML_bipartitions.bears_final.txt) in FigTree <br/>
 ![ML tree reconstructed with RAxML](../master/LAB2/bears_ML.png)
 
-### Bayesian analysis with MrBayes
-1. Go to the folder with your multiple sequence alignments:
-	* for Mac users: Open terminal and type `cd <path_to_your_folder>
-	* for Windows users: 
-2. Start MrBayes program by typing `mb` in Mac Os terminal or by executing mrbayes.exe program in Windows
-3. To read the help menu, type `MrBayes > help`
-4. Read the file with multiple sequence alignment:<br/>
+### G. Bayesian analysis with MrBayes
+1. Start **MrBayes** program by typing `mb` in Mac Os terminal or by executing *mrbayes.exe* program in Windows
+2. To read the help menu, type `MrBayes > help`
+3. Read the file with multiple sequence alignment:<br/>
 `MrBayes > execute LAB2/bears.nex`
-5. Define gene partitions in your sequences:
+4. Define gene partitions in your sequences:
 <pre><code>MrBayes > charset cytb = 1-1140
 MrBayes > charset irbp = 1141-2420 
 MrBayes > partition by_gene = 2: cytb,irbp
 MrBayes > set partition = by_gene</code></pre>
+5. Define the outgroup: <br/>
+`MrBayes > outgroup Panthera_pardus`
 6. Check the default model settings:<br/>
 `MrBayes > showmodel`<br/>
 or<br/>
@@ -285,17 +284,26 @@ MrBayes > prset applyto=(1) shapepr = exponential(10.0)</code></pre>
 `MrBayes > mcmc`
 13. Summarize the mcmc search information and build the tree:
 <pre><code>MrBayes > sump
-MrBayes > sump</code></pre>
+MrBayes > sumt</code></pre>
 14. Quit the MrBayes program<br/>
 `MrBayes > quit`
 15. Open consensus tree [bears.nex.con.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.nex.con.tre) in FigTree
 ![Bayesian tree reconstructed with MrBayes](../master/LAB2/bears_BA.png)
 
+## Lab 3
 
+### Software required for the Lab 2:
+* [Tracer v.1.6](http://tree.bio.ed.ac.uk/software/tracer/)
+* [BEAST v.2.4.3](http://beast2.org/)
 
+### A. MCMC Diagnostics
+1. Open **Tracer** program
+2. Upload [bears.nex.run1.p](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.nex.run1.p) and [bears.nex.run2.p](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.nex.run2.p) trace files obtained from MrBayes analysis
+3. Check the convergence between mcmc runs
+4. Check stability of the mcmc search on the Trace diagram 
+5. Compare the marginal probability distributions of the alpha rate parameter between the two genes
 
-
-
+### B. Tree calibration in BEAST
 
 
 
