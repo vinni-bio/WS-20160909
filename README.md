@@ -200,7 +200,7 @@
   
 ### F. Maximum Likelihood Analysis (ML) with RAxML
 	
-<p>Command line tutorial for RAxML:</p>
+<p>**Command line tutorial for RAxML:**</p>
 1. Perform multiple ML searches for the best-scoring trees from parsimony inference:<br/>
 `raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
 2. Conduct 100 bootstrap searches:</br>
@@ -208,7 +208,7 @@
 3. Draw bipartitions from bootstrap analysis on the ML tree:<br/>
 `raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`	
 
-<p>CIPRES tutorial for RAxML:</p>
+<p>**CIPRES tutorial for RAxML:**</p>
 1. Go to CIPRES portal: https://www.phylo.org
 2. Click ![Use the CIPRES Science Gateway](http://www.phylo.org/images/interface/blue-button.png)
 3. Click on **_Proceed without Registering_**
@@ -247,8 +247,9 @@
 	* Select the Analysis type: `Draw bipartitions onto a single tree topology (-f b)`
 	* Select file with topologies for bipartitions (-z): `RAxML_bootstrap.bears_boot`
 26. Provide the name for your task (e.g., BEARS-FINAL) and click **Save and Run Task**
-27. Download and open `RAxML_bipartitions.bears_final` in FigTree
+27. Download and open `RAxML_bipartitions.bears_final` in FigTree <br/>
 ![ML tree reconstructed with RAxML](../master/LAB2/bears_ML.png)
+
 
 
 
