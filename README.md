@@ -334,12 +334,14 @@ MrBayes > sumt</code></pre>
 12. Check the posterior probability distributions from [bears.log](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.log) file in Tracer
 13. Open the BEAST trees in TreeAnnotator
 	* Set Burnin percentage: `20`
-	* Select the `Maximum Clade credibility tree`
+	* Select the `Maximum clade credibility tree`
 	* Select Node heights: `Mean heights`
 	* Select the input file: [bears_tree.trees](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears_tree.trees)
 	* Provide the name for the output file: `bears_final_beast.tre`
 14. Open the consensus tree [bears_final_beast.tre](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears_final_beast.tre) with FigTree
-![Bayesian tree reconstructed and calibrated with BEAST](../master/LAB3/bears_BEAST.png)
+
+![Bayesian tree reconstructed and calibrated with BEAST](../master/LAB3/bears_beast.png)
+
 #### HOMEWORK QUESTIONS (Likelihood and Bayesian methods):
 	* Compare the topology, branch lengths and node support values between RAxML, MrBayes and BEAST trees. How do they differ?
 	* For BEAST analysis, increase the number of mcmc steps in a chain (e.g., #10,000,000). Does it change the high posterior densities (HPDs) for nodes? Are the effective sample sizes (ESS) for parameter estimates above 200 (check new log file in Tracer)?
