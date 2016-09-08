@@ -246,7 +246,7 @@
 24. In **Simple parameters** section:
 	* Set the name for search output: `bears_final`
 	* Supply a tree (-t): `RAxML_bestTree.bears_ML`
-25. In **Advanced parameters** section, go to ** Configure the Analysis**:
+25. In **Advanced parameters** section, go to **Configure the Analysis**:
 	* Select the Analysis type: `Draw bipartitions onto a single tree topology (-f b)`
 	* Select file with topologies for bipartitions (-z): `RAxML_bootstrap.bears_boot`
 26. Provide the name for your task (e.g., BEARS-FINAL) and click **Save and Run Task**
