@@ -209,7 +209,7 @@
 `raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -b 12345 -n bears_boot -# 100`
 4. Draw bipartitions from bootstrap analysis on the ML tree:<br/>
 `raxmlHPC -f b -t RAxML_bestTree.bears_ML -z RAxML_bootstrap.bears_boot -m GTRGAMMA -p 12345 -n bears_final`
-5. Open `RAxML_bipartitions.bears_final` in FigTree
+5. Open `RAxML_bipartitions.bears_final` in FigTree<br/>
 
 <p><b>CIPRES tutorial for RAxML:</b></p>
 1. Go to CIPRES portal: https://www.phylo.org
