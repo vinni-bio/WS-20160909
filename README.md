@@ -177,11 +177,11 @@
 3. Change the name of the alignment to `bears.phy`
 4. Change the data block section as the following:
 <pre><code>    cytb_pos1 = 1-1140\3;
-cytb_pos2 = 2-1140\3;
-cytb_pos3 = 3-1140\3;
-irbp_pos1 = 1141-2420\3;
-irbp_pos2 = 1142-2420\3;
-irbp_pos3 = 1143-2420\3;</code></pre>
+    cytb_pos2 = 2-1140\3;
+    cytb_pos3 = 3-1140\3;
+    irbp_pos1 = 1141-2420\3;
+    irbp_pos2 = 1142-2420\3;
+    irbp_pos3 = 1143-2420\3;</code></pre>
 5. Save the file, leaving its original file name, in the folder with your alignment files:<br/>
 [partition_finder.cfg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/partition_finder.cfg)
 6. Open Terminal (Mac) or Command Prompt (Windows)
