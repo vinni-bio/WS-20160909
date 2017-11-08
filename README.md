@@ -213,6 +213,7 @@
 5. Open `RAxML_bipartitions.bears_final` in FigTree<br/>
 
 <p><b>CIPRES tutorial for RAxML:</b></p>
+
 1. Go to CIPRES portal: https://www.phylo.org
 2. Click ![Use the CIPRES Science Gateway](http://www.phylo.org/images/interface/blue-button.png)
 3. Click **_Proceed without Registering_**
