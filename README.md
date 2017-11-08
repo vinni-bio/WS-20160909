@@ -17,7 +17,7 @@
 ### Software required for the Lab 1:
 * Text editor [TextWrangler](http://www.barebones.com/products/textwrangler/download.html) (Mac Os X) or [Notepad++](https://notepad-plus-plus.org/download/v6.9.2.html) (Windows)
 * [MEGA 7.0](http://www.megasoftware.net/)
-* [Sequence Matrix](http://gaurav.github.io/taxondna/) 
+* [Sequence Matrix](http://gaurav.github.io/taxondna/)
 
 ### A. Check the number of GenBank entrees for the group of interest (i.e., Bears)
 1. Go to http://www.ncbi.nlm.nih.gov
@@ -37,7 +37,7 @@
 [irbp-ursidae.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp-ursidae.fasta)
 4. In the search line, enter:<br/>
 `“mitochondrion”[filter] AND "Ursidae"[ORGN] AND "Talbot SL"[Author] AND 1140[SLEN]`
-5. Save sequences into 'fasta' file:</br> 
+5. Save sequences into 'fasta' file:</br>
 [cytb-ursidae.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb-ursidae.fasta)
 
 ### C. Select the outgroup
@@ -74,22 +74,22 @@
 
 ### E. Sequence file format conversion
 1. Open [Sequence Matrix](http://gaurav.github.io/taxondna/) program
-2. Drag and drop [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta) file to Sequence Matrix window 
+2. Drag and drop [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta) file to Sequence Matrix window
 3. Click **Use species names**
 4. Export sequences in Nexus format ("naked" Nexus for GARLI):<br/>
-[irbp.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.nex) 
+[irbp.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.nex)
 5. Export sequences as Phylip (RAxML)<br/>
 [irbp.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.phy)
 6. In the top **File** menu, select **Clear all sequences**
 6. Drag and drop [cytb.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.fasta) file to Sequence Matrix window
 7. Click **Use species names**
 8. Export sequences in Nexus format ("naked" Nexus for GARLI):<br/>
-[cytb.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.nex) 
+[cytb.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.nex)
 9. Export sequences as Phylip (RAxML)<br/>
 [cytb.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/cytb.phy)
-10. Drag and drop [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta) file to Sequence Matrix window 
+10. Drag and drop [irbp.fasta](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.fasta) file to Sequence Matrix window
 11. Export sequences in Nexus format ("naked" Nexus for GARLI):<br/>
-[bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex) 
+[bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex)
 12. Export sequences as Phylip (RAxML)<br/>
 [bears.phy](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.phy)
 
@@ -112,15 +112,15 @@
 
 ### A. Import concatenated alignment file to MEGA 7.0
 1. Open [MEGA 7.0](http://www.megasoftware.net/)
-2. Open top **File** meny and select **Convert file format to MEGA** 
+2. Open top **File** meny and select **Convert file format to MEGA**
 3. Select [bears.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/bears.nex)
-4. Save new file as [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
+4. Save new file as [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg)
 5. Quit from **MEGA _File Editor and Format Converter_**
-6. Open **Data** menu and select **Open a File** to open [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg) 
+6. Open **Data** menu and select **Open a File** to open [bears.meg](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB2/bears.meg)
 
 
 ### B. Maximum Parsimony analysis (MP)
-1. Open **Phylogeny** menu and select **Construct/Test Maximum Parsimony Tree** 
+1. Open **Phylogeny** menu and select **Construct/Test Maximum Parsimony Tree**
 2. Set **bootstrap test** with *100 replicates*
 3. Set **gaps** for *complete deletion*
 4. Set **SPR** as tree search method
@@ -137,7 +137,7 @@
   * Run the MP analysis for two genes separately (open *.fasta files). Does the tree topology differ between the two genes?
 
 ### C. Neighbor-Joining test in MEGA 7.0
-1. Open **Phylogeny** menu and select **Construct/Test Neighbor-Joining Tree** 
+1. Open **Phylogeny** menu and select **Construct/Test Neighbor-Joining Tree**
 2. Set **bootstrap test** with 100 replicates
 3. Set **gaps** for complete deletion
 4. Set **model** option to *p-distance*
@@ -160,10 +160,10 @@
 4. Select search through 7 substitution schemes and run the analysis
 5. In **Analysis** menu on the top, select **AIC**, **AICc**, **BIC** or **DT** (you can do it by clicking on the menu of each criteria one after another)
 6. In **Results** menu on the top, click **_Show results table_**
-7. Sort the results by the column containing criterion scores 
+7. Sort the results by the column containing criterion scores
 8. Check the parameters of each selected model in the program console window
 9. REPEAT the same procedure for *irbp* gene: [irbp.nex](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB1/irbp.nex)
- 
+
 #### HOMEWORK QUESTIONS (Model Selection):
   * Do all four criteria support the same model?
   * If not, check how chosen models differ from each other by comparing their parameters (use the table provided on the lecture slide).
@@ -176,7 +176,8 @@
 2. Open  `partition_finder.cfg` file in the text editor (e.g., TextWrangler)
 3. Change the name of the alignment to `bears.phy`
 4. Change the data block section as the following:
-<pre><code>cytb_pos1 = 1-1140\3;
+<pre><code>
+    cytb_pos1 = 1-1140\3;
 	cytb_pos2 = 2-1140\3;
 	cytb_pos3 = 3-1140\3;
 	irbp_pos1 = 1141-2420\3;
@@ -198,11 +199,12 @@
 #### HOMEWORK QUESTIONS (Partition Analysis):
   * How many partitions have been revealed in your alignment data?
   * Do the partition models correspond with the models that you have obtained in the jModelTest analysis?
-  
+
 ### F. Maximum Likelihood Analysis (ML) with RAxML
-	
+
 <p><b>Command line tutorial for RAxML:</b></p>
-1. Type `raxmlHPC -help` to see the manual for all RAxML commands and settings 
+
+1. Type `raxmlHPC -help` to see the manual for all RAxML commands and settings
 2. Perform multiple ML searches for the best-scoring trees from parsimony inference:<br/>
 `raxmlHPC -s bears.phy -q partitions.txt -m GTRGAMMA -p 12345 -n bears_ML -# 20`
 3. Conduct 100 bootstrap searches:</br>
@@ -260,7 +262,7 @@
 `MrBayes > execute LAB2/bears.nex`
 4. Define gene partitions in your sequences:
 <pre><code>MrBayes > charset cytb = 1-1140
-MrBayes > charset irbp = 1141-2420 
+MrBayes > charset irbp = 1141-2420
 MrBayes > partition by_gene = 2: cytb,irbp
 MrBayes > set partition = by_gene</code></pre>
 5. Define the outgroup: <br/>
@@ -301,7 +303,7 @@ MrBayes > sumt</code></pre>
 1. Open [Tracer](http://tree.bio.ed.ac.uk/software/tracer/) program
 2. Upload [bears.nex.run1.p](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.nex.run1.p) and [bears.nex.run2.p](https://raw.githubusercontent.com/vinni-bio/WS-20160909/master/LAB3/bears.nex.run2.p) trace files obtained during the MrBayes analysis
 3. Check the convergence between mcmc runs
-4. Check stability of the mcmc search on the Trace diagram 
+4. Check stability of the mcmc search on the Trace diagram
 5. Compare the marginal probability distributions of the alpha rate parameter between the two genes
 
 ### B. Tree calibration in BEAST
