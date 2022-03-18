@@ -104,7 +104,7 @@
 
 ### Software required for the Lab 2:
 * [MEGA 7.0](http://www.megasoftware.net/)
-* [jModelTest  v2.1.10](https://drive.google.com/drive/folders/0ByrkKOPtF_n_OUs3d0dNcnJPYXM)
+* [jModelTest v2.1.10](https://drive.google.com/drive/folders/0ByrkKOPtF_n_OUs3d0dNcnJPYXM)
 * [PartitionFinder v.1.1.1](http://www.robertlanfear.com/partitionfinder/)
 * [MrBayes v.3.2.6](http://mrbayes.sourceforge.net/download.php)
 * [FigTree v.1.4.2](http://tree.bio.ed.ac.uk/software/figtree/)
